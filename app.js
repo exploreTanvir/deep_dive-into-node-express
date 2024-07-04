@@ -10,8 +10,8 @@ const app=express()
 app.use("/user",userRouter)
 app.use("/post",postRouter)
 
-app.get("/products/:prodId",(req,res)=>{
-        res.send("Hello I am listening")
+app.get("/products/:prodID/reviews/:reviewID",(req,res)=>{
+    res.send("i am listening and the parameter name is "+req.params.prodID+" and the review is "+req.params.reviewID)
 })
 app.get("/",(req,res)=>{
         res.send("this is home page")
