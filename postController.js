@@ -19,7 +19,7 @@ exports.updateSinglePost=(req,res)=>{
 }
 
 exports.deleteAllPost=(req,res)=>{
-    res.send("Delete your post")
+    res.send("Delete your post") 
 }
 
 exports.deleteSinglePost=(req,res)=>{
