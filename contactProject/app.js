@@ -1,7 +1,8 @@
 const express=require("express")
 const app=express()
+const contactRoute=require("./route")
 
-
+app.use("/user",contactRoute)
 
 
 app.get("*",(req,res)=>{
