@@ -1,7 +1,7 @@
 const express=require("express")
 const app=express()
-
-
+const contactRoute=require("./contactRoutes")
+app.use("/contact",contactRoute)
 
 
 app.get("*",(req,res)=>{

@@ -25,7 +25,7 @@ class Contact{
         let index=this.contacts.findIndex(contact=>contact.id==id)
         let deletedObj=this.contacts[index]
         this.contacts=this.contacts.filter(contact=>contact.id!==id)
-        return deletedObj
+        return deletedObj;
     }
 }
 
