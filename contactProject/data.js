@@ -1,19 +1,19 @@
 let data=[
     {
         id:1,
-        name:"tanvir",
+        name:"Tanvir",
         email:"tanvirhossen853@gmail.com",
         phone:"01312591010"
     },
     {
         id:2,
-        name:"raju",
+        name:"Raju",
         email:"raju@gmail.com",
         phone:"01954103340"
     },
     {
         id:3,
-        name:"hasan",
+        name:"Hasan",
         email:"hasan@gmail.com",
         phone:"0123456789"
     },
