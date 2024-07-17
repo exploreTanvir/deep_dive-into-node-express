@@ -52,6 +52,8 @@ app.get("/",(req,res)=>{
     res.send("This Is Home Page")
 })
 
+// post: /product -- create new product 
+// create new post
 app.post("/product",async(req,res)=>{
 try {
     const newProduct=new productModel({
@@ -65,6 +67,46 @@ try {
     res.status(500).send({message:error.message})
 }
 })
+
+
+
+//  get: /product -- find all product 
+// find all product
+app.get("/product",async(req,res)=>{
+    try {
+       const allProduct= await productModel.find();
+       if(allProduct){
+        res.status(200).send({message:"Find All Product ",
+            data:allProduct
+        })
+       }
+       else{
+        res.status(404).send({message:"404 Not found"})
+       }
+    } catch (error) {
+    res.status(500).send({message:error.message})
+    }
+})
+
+//  get: /product/:id -- find a specific product 
+// find one product
+app.get("/product/:id",async(req,res)=>{
+    try {
+        const id=req.params.id
+       const allProduct= await productModel.findOne({_id:id}).select({_id:0,__v:0});
+       if(allProduct){
+        res.status(200).send({message:"Find One Product ",
+            data:allProduct
+        })
+       }
+       else{
+        res.status(404).send({message:"404 Not found"})
+       }
+    } catch (error) {
+    res.status(500).send({message:error.message})
+    }
+})
+
 
 
 const PORT=3005
